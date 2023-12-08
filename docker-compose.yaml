@@ -50,3 +50,6 @@ services:
       start_period: 5s
 volumes:
   db_data:
+
+
+# npx hasura init pizzastack --endpoint http://localhost:8080 - init hasura 
