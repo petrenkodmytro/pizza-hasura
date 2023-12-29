@@ -31,6 +31,8 @@ services:
       HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
       HASURA_GRAPHQL_UNAUTHORIZED_ROLE: guest
       HASURA_GRAPHQL_JWT_SECRET: '{"type": "HS256", "key": "2sJ63Qo39XeE0HHtTe0MfLmM2ojZGwhQ"}'
+      HASURA_ACTIONS_ENDPOINT: http://host.docker.internal:8888/.netlify/functions
+      HASURA_PIZZASTACK_SECRET: mypizzastacksecret
       HASURA_GRAPHQL_METADATA_DEFAULTS: '{"backend_configs":{"dataconnector":{"athena":{"uri":"http://data-connector-agent:8081/api/v1/athena"},"mariadb":{"uri":"http://data-connector-agent:8081/api/v1/mariadb"},"mysql8":{"uri":"http://data-connector-agent:8081/api/v1/mysql"},"oracle":{"uri":"http://data-connector-agent:8081/api/v1/oracle"},"snowflake":{"uri":"http://data-connector-agent:8081/api/v1/snowflake"}}}}'
     depends_on:
       data-connector-agent:
