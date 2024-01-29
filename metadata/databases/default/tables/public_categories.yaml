@@ -1,26 +1,22 @@
 table:
-  name: menu
+  name: categories
   schema: public
-object_relationships:
-  - name: category
+array_relationships:
+  - name: menu_items
     using:
       manual_configuration:
         column_mapping:
-          category_id: id
+          id: category_id
         insertion_order: null
         remote_table:
-          name: categories
+          name: menu
           schema: public
 select_permissions:
   - role: guest
     permission:
       columns:
-        - price
-        - weight
-        - image
-        - ingredients
+        - slug
         - title
-        - category_id
         - id
       filter: {}
     comment: ""
